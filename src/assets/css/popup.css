@@ -1,0 +1,106 @@
+/*HTML and Body Style*/
+html, body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  min-height: 180px;
+  padding: 0;
+  width: 384px;
+}
+
+/*Logo and Header Styles*/
+h1{
+  font-family: 'Menlo', monospace;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: #5ea0cf;
+}
+
+img{
+  width:30px;
+} 
+
+.logo{
+  padding: 16px;
+}
+
+.logo-icon{
+  vertical-align: text-bottom;
+  margin-right: 12px;
+}
+
+.version{
+  color: #777;
+  font-size: 18px;
+}
+
+/*Modal Styling*/
+.modal-header{
+  align-items: center;
+  border-bottom: 0.5px solid #dadada;  
+}
+
+.modal-content{
+  padding: 0 22px;
+  border: 0;
+  background-color:rgb(241, 239, 239);
+}
+
+.modal-icons{
+  border-top: 0.5px solid #dadada;
+  height: 50px;
+  width: 100%;
+}
+
+/*Container Styling*/
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 45px;
+}
+
+.flex{
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+  width:120px;
+}
+
+.flex:hover{
+  opacity: 0.4;
+}
+
+.flex .fa{
+  font-size: 40px;
+}
+
+.description-text{
+  font-size:10px;
+  padding-top:10px;
+}
+
+.select-service-text{
+  font-size: 12px;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+/* Style buttons */
+.btn {
+    background-color: royalblue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+.iconBtn{
+  font-size:.75rem;
+  text-transform: capitalize;
+}
