@@ -6,7 +6,7 @@
                     <span>Email:</span>
                 </div>
                 <div id="userNamefield" class="column is-4">
-                    <input type="text">
+                    <input type="text" :value="username">
                 </div>
             </div>
             <div class="login-field">
@@ -14,7 +14,7 @@
                     <span>Password:</span>
                 </div>
                 <div id="passwordfield" class="column is-4">
-                    <input type="password">
+                    <input type="password" :value="password">
                 </div>
             </div>
         </div>
@@ -24,6 +24,12 @@
 <script>
     export default {
          name: 'Login',
+         data() {
+             return {
+                 username: value,
+                 password: value,
+             }
+         },
     }
 </script>
 
