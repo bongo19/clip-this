@@ -34,7 +34,8 @@ import * as axios from 'axios';
          methods: {
              async submitLogin() {
                  if(this.cloudService == 'Dropbox'){
-                     await this.authenticateDropbox();
+                     //await this.authenticateDropbox();
+                     window.location.href = 'https://www.dropbox.com/oauth2/authorize?client_id=imf0pehsqjibmn2&response_type=token&redirect_uri=http://localhost:8080/dropbox/';
                  }
              },
              async authenticateDropbox(){
@@ -52,7 +53,7 @@ import * as axios from 'axios';
                                         // link:`https://www.dropbox.com/sh/${api_token}/${api_token_secret}?dl=0`
                                     },
                                     headers:{
-                                        'Authorization': `Basic ${base64}`,
+                                        'Authorization': 'PKCE',
                                         'Content-Type': 'application/json'
                                     }
                 });
