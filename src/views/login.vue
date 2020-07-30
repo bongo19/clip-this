@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import * as axios from 'axios';
+
     export default {
          name: 'Login',
          props: {
@@ -38,8 +40,26 @@
              };
          },
          methods: {
-             submitLogin() {
+             submitLogin(username, password) {
+                 if(cloudService == 'dropbox'){
+                     authenticateDropbox(username, password);
+                 }
+             },
+             async authenticateDropbox(username, password){
+                //  const response = await axios.({
+                //      method: 'post',
+                //      url: 'https://api.dropboxapi.com/2/auth/token/from_oauth1',
+                //      header:{
+                //         'Authorization':'Basic <get app key and secret>',
+                //         'Content-Type' : 'application/json'
+                //      },
+                //      data: {
+                //          email: this.data.username,
+                //          password: this.data.password
+                //      },
+                //  });
                  
+                 this.data.token = response.data;
              }
          },
     }
