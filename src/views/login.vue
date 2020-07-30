@@ -22,6 +22,12 @@
 <script>
     export default {
          name: 'Login',
+         props: {
+             cloudService: {
+                 type: String,
+                 default:'', 
+             },
+         },
          data() {
              return {
                  userObj: {

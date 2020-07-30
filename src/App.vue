@@ -1,13 +1,13 @@
 <template>
-<div id='app'>
-    <HeaderBar/>
-    <div class="main-section columns">
-        <router-view></router-view>
+    <div id='app'>
+        <HeaderBar/>
+        <div class="main-section columns">
+            <router-view></router-view>
+        </div>
     </div>
-</div>
 </template>
 <script>
-import HeaderBar from '@/views/header-bar.vue';
+import HeaderBar from '@/components/header-bar.vue';
 
 export default {
     name: 'App',
