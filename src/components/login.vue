@@ -1,21 +1,13 @@
 <template>
     <div class="content-container">
         <div class="column">
-            <div class="login-field">
-                <div id="userNameLbl" class="column is-8">
-                    <span>Email:</span>
-                </div>
-                <div id="userNamefield" class="column is-4">
-                    <input type="text">
-                </div>
+            <div class="field">
+               <label for="userName" class="label">Username/Email:</label>
+               <input id="userName" type="text" class="input" v-model="userObj.userName"/>
             </div>
-            <div class="login-field">
-                <div id="passwordLbl" class="column is-8">
-                    <span>Password:</span>
-                </div>
-                <div id="passwordfield" class="column is-4">
-                    <input type="password">
-                </div>
+            <div class="field">
+               <label for="password" class="label">Password:</label>
+               <input id="password" type="password" class="input" v-model="userObj.password"/>
             </div>
             <footer class="card-footer">
                 <button class="link card-footer-item success-button" @click="submitLogin">
