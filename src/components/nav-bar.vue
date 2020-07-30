@@ -7,7 +7,7 @@
             </div>
             <div class="columns level-item has-text-centered">
                 <div class="column is-1">
-                    <router-link :to="{ name:'login', params: { cloudService: 'dropbox'}}" class="button is-info is-outlined iconBtn" tag="button"> 
+                    <router-link :to="{ name:'login', params: { cloudService: 'Dropbox'}}" class="button is-info is-outlined iconBtn" tag="button"> 
                             <i class="fab fa-dropbox"></i><span>Dropbox</span>
                     </router-link>
                    

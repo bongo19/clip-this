@@ -1,14 +1,11 @@
 <template>
     <div class="content-container">
-        <div class="column">
-            <div class="field">
-               <label for="userName" class="label">Username/Email:</label>
-               <input id="userName" type="text" class="input" v-model="userObj.userName"/>
-            </div>
-            <div class="field">
-               <label for="password" class="label">Password:</label>
-               <input id="password" type="password" class="input" v-model="userObj.password"/>
-            </div>
+        <section>
+            <header class="card-header">
+                <p class="card-header-title">Connect</p>
+            </header>
+            <p>Click the button below to allow Clip It to access and copy files to your {{cloudService}}</p>
+        </section>
             <footer class="card-footer">
                 <button class="link card-footer-item success-button" @click="submitLogin">
                     <i class="fa fa-sign-in"></i>
@@ -16,7 +13,6 @@
                 </button>
             </footer>
         </div>
-    </div>
 </template>
 
 <script>
@@ -27,40 +23,44 @@ import * as axios from 'axios';
          props: {
              cloudService: {
                  type: String,
-                 default:'', 
+                 default:null,
              },
          },
          data() {
              return {
-                 userObj: {
-                    userName: null,
-                    password: null,
-                    token: null,
-                 },
+                 token: null,
              };
          },
          methods: {
-             submitLogin(username, password) {
-                 if(cloudService == 'dropbox'){
-                     authenticateDropbox(username, password);
+             async submitLogin() {
+                 if(this.cloudService == 'Dropbox'){
+                     await this.authenticateDropbox();
                  }
              },
-             async authenticateDropbox(username, password){
-                //  const response = await axios.({
-                //      method: 'post',
-                //      url: 'https://api.dropboxapi.com/2/auth/token/from_oauth1',
-                //      header:{
-                //         'Authorization':'Basic <get app key and secret>',
-                //         'Content-Type' : 'application/json'
-                //      },
-                //      data: {
-                //          email: this.data.username,
-                //          password: this.data.password
-                //      },
-                //  });
-                 
-                 this.data.token = response.data;
-             }
+             async authenticateDropbox(){
+               const api_token = "imf0pehsqjibmn2";
+               const api_token_secret = "99jz6txlmbwnd1v";
+               const base64 = btoa(`${api_token}:${api_token_secret}`);
+
+                const response = await axios({
+                                    method: 'post',
+                                    // url: 'https://api.dropboxapi.com/2/auth/token/from_oauth1',
+                                    url: 'https://api.dropboxapi.com/2/check/app',
+                                    data: {
+                                        //oauth1_token: api_token,
+                                        //oauth1_token_secret: api_token_secret,
+                                        'query':'please work',
+                                    },
+                                    headers:{
+                                        'Authorization': `Basic ${base64}`,
+                                        'Content-Type': 'application/json'
+                                    }
+                });
+
+                if(response.status == 200){
+                    this.data.token = response.data;
+                }
+             },
          },
     }
 </script>

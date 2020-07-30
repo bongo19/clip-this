@@ -1,6 +1,6 @@
 <template>
     <div class="content-container">
-        <router-view></router-view>
+        <h1>WELCOME TO CLIP IT!!!</h1>
     </div>
 </template>
 
