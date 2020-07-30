@@ -1,17 +1,18 @@
 <template>
-<div id='app'>
-    <HeaderBar />
-</div>
+    <div id='app'>
+        <HeaderBar/>
+        <div class="main-section columns">
+            <router-view></router-view>
+        </div>
+    </div>
 </template>
 <script>
 import HeaderBar from '@/components/header-bar.vue';
-// import NavBar from '@/components/nav-bar.vue';
 
 export default {
     name: 'App',
     components:{
         HeaderBar,
-        // NavBar,
     },
 };
 </script>
