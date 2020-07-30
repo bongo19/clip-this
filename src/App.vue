@@ -1,15 +1,18 @@
 <template>
 <div id='app'>
-    <Home />
+    <HeaderBar/>
+    <div class="main-section columns">
+        <router-view></router-view>
+    </div>
 </div>
 </template>
 <script>
-import Home from '@/views/home.vue';
+import HeaderBar from '@/views/header-bar.vue';
 
 export default {
     name: 'App',
     components:{
-        Home,
+        HeaderBar,
     },
 };
 </script>
