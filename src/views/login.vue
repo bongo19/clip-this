@@ -35,7 +35,7 @@ import * as axios from 'axios';
              async submitLogin() {
                  if(this.cloudService == 'Dropbox'){
                      //await this.authenticateDropbox();
-                     window.location.href = 'https://www.dropbox.com/oauth2/authorize?client_id=imf0pehsqjibmn2&response_type=token&redirect_uri=http://localhost:8080/dropbox/';
+                     window.location.href = 'https://www.dropbox.com/oauth2/authorize?client_id=imf0pehsqjibmn2&response_type=token&redirect_uri=http://localhost:8080/dropbox/token#';
                  }
              },
              async authenticateDropbox(){

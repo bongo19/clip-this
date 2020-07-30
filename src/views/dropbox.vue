@@ -6,14 +6,26 @@
 </template>
 
 <script>;
+const urlParams = new URLSearchParams(window.location.search);
+const accessToken = urlParams.get('access_token');
     export default {
         name:'Dropbox',
-        props: {
-            token: {
-                type: String,
-                default: 'this.$route.query.access_token',
-            },
+        data() {
+            return {
+                token: '',
+            }
         },
+        methods: {
+            getAccessToken() {
+                const tokenHash = location.hash.substring(13);
+                this.token = tokenHash.substring(0,tokenHash.indexOf("&"));
+                console.log(this.token.substring(13,this.token.indexOf("&")));
+            }
+        },
+        mounted(){
+            console.log("component mounted!");
+            this.getAccessToken();
+        }
     }
 </script>
 
