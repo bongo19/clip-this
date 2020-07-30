@@ -17,6 +17,12 @@
                     <input type="password">
                 </div>
             </div>
+            <footer class="card-footer">
+                <button class="link card-footer-item success-button" @click="submitLogin">
+                    <i class="fa fa-sign-in"></i>
+                    <span>Sign-In</span>
+                </button>
+            </footer>
         </div>
     </div>
 </template>
@@ -24,6 +30,20 @@
 <script>
     export default {
          name: 'Login',
+         data() {
+             return {
+                 userObj: {
+                    userName: null,
+                    password: null,
+                    token: null,
+                 },
+             };
+         },
+         methods: {
+             submitLogin() {
+                 
+             }
+         },
     }
 </script>
 
