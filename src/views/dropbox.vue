@@ -6,8 +6,6 @@
 </template>
 
 <script>;
-const urlParams = new URLSearchParams(window.location.search);
-const accessToken = urlParams.get('access_token');
     export default {
         name:'Dropbox',
         data() {
@@ -23,7 +21,6 @@ const accessToken = urlParams.get('access_token');
             }
         },
         mounted(){
-            console.log("component mounted!");
             this.getAccessToken();
         }
     }
