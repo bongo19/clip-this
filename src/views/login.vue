@@ -44,12 +44,12 @@ import * as axios from 'axios';
 
                 const response = await axios({
                                     method: 'post',
-                                    // url: 'https://api.dropboxapi.com/2/auth/token/from_oauth1',
-                                    url: 'https://api.dropboxapi.com/2/check/app',
+                                    url: 'https://api.dropboxapi.com/2/auth/token/from_oauth1',
+                                    //url: `https://dropbox.com/oauth2/authorize?client_id=${api_token}&response_type=code`,
                                     data: {
-                                        //oauth1_token: api_token,
-                                        //oauth1_token_secret: api_token_secret,
-                                        'query':'please work',
+                                        oauth1_token: api_token,
+                                        oauth1_token_secret: api_token_secret,
+                                        // link:`https://www.dropbox.com/sh/${api_token}/${api_token_secret}?dl=0`
                                     },
                                     headers:{
                                         'Authorization': `Basic ${base64}`,
