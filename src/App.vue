@@ -1,17 +1,15 @@
 <template>
 <div id='app'>
-    <HeaderBar />
+    <Home />
 </div>
 </template>
 <script>
-import HeaderBar from '@/components/header-bar.vue';
-// import NavBar from '@/components/nav-bar.vue';
+import Home from '@/views/home.vue';
 
 export default {
     name: 'App',
     components:{
-        HeaderBar,
-        // NavBar,
+        Home,
     },
 };
 </script>
