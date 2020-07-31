@@ -3,7 +3,7 @@
     <header class="card-header flex-container">
       <p class="card-header-title">Currently Connected to Dropbox</p>
     </header>
-    <div class="card-content">
+    <!-- <div class="card-content">
       <div class="media">
         <ul class="media-left list is-hoverable">
           <li v-for="entry in entries.entries" :key="entry.id">
@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -65,10 +65,10 @@ export default {
     }
   },
   async mounted() {
-    if (this.token == null) {
-      this.getAccessToken();
-    }
-    await this.getFilesInClipFolder();
+    // if (this.token == null) {
+    //   this.getAccessToken();
+    // }
+    // await this.getFilesInClipFolder();
   }
 };
 </script>

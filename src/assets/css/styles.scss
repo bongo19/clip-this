@@ -10,33 +10,7 @@ html, body{
     // width: 384px;
   }
   
-  /*Logo and Header Styles*/
-  h1{
-    font-family: 'Menlo', monospace;
-    font-size: 22px;
-    font-weight: 400;
-    margin: 0;
-    color: #5ea0cf;
-  }
-  
-  img{
-    width:30px;
-  } 
-  
-  .logo{
-    padding: 16px;
-  }
-  
-  .logo-icon{
-    vertical-align: text-bottom;
-    margin-right: 12px;
-  }
-  
-  .version{
-    color: #777;
-    font-size: 18px;
-  }
-
+ 
   /*Container Styling*/
   .flex-container{
     display: flex;
@@ -63,11 +37,7 @@ html, body{
     padding-top:10px;
   }
   
-  .select-service-text{
-    font-size: 12px;
-    font-weight: bold;
-    padding-left: 30px;
-  }
+  
   
   /* Style buttons */
   .btn {

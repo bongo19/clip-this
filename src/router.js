@@ -12,12 +12,12 @@ export default new Router({
     mode: 'history',
     base: '/',
     routes: [
-        // {
-        //     path: '/popup/app',
-        //     component: App
-        // },
+        {
+            path: '/public/index.html',
+            component: App
+        },
         { 
-            path: '/popup/app', 
+            path: '/public/index.html', 
             redirect: '/home', 
             component: Home,
             children:[

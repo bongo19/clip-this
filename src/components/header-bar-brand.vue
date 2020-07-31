@@ -19,3 +19,30 @@ export default {
     name: 'HeaderBarBrand',
 }
 </script>
+
+
+<style lang="scss" scoped>
+
+  .logo {
+    padding: 16px;
+    font-family: 'Menlo', monospace;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+    color: #5ea0cf;
+  }
+  
+  .logo-icon {
+    vertical-align: text-bottom;
+    margin-right: 12px;
+    margin-top:15%;
+    width:30px;
+    
+  }
+  
+  .version {
+    color: #777;
+    font-size: 18px;
+  }
+
+</style>

@@ -2,16 +2,17 @@
   <div id="app">
     <HeaderBar />
     <div class="main-section columns">
-      <router-view></router-view>
+      <Home></Home>
     </div>
   </div>
 </template>
 <script>
 import HeaderBar from "@/components/header-bar.vue";
+import Home from "@/views/home.vue";
 
 export default {
   name: "App",
-  components: { HeaderBar },
+  components: { HeaderBar, Home },
   created() {
     this.$router.push("app");
   }

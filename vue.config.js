@@ -6,7 +6,7 @@ module.exports = {
       title: 'Popup'
     },
     index: {
-      entry: 'src/popup/main.js',
+      entry: './src/popup/main.js',
       template: 'public/index.html',
       filename: 'index.html',
       title: 'Index Page',
@@ -16,7 +16,7 @@ module.exports = {
     browserExtension: {
       componentOptions: {
         background: {
-          entry: 'src/background.js'
+          entry: './src/background.js'
         },
         contentScripts: {
           entries: {
