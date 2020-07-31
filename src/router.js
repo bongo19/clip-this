@@ -4,15 +4,20 @@ import Home from './views/home.vue';
 import Dropbox from './views/dropbox.vue';
 import NavBar from '@/components/nav-bar.vue';
 import Login from './views/login.vue';
+import App from './popup/App.vue';
 
 Vue.use(Router);
 
 export default new Router({
     mode: 'history',
-    base: process.env.BASE_URL,
+    base: '/',
     routes: [
+        // {
+        //     path: '/popup/app',
+        //     component: App
+        // },
         { 
-            path: '/', 
+            path: '/popup/app', 
             redirect: '/home', 
             component: Home,
             children:[
