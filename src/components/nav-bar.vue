@@ -1,7 +1,7 @@
 <template>
 <section>
     <section class="container">
-        <div class="level">
+        <div v-if="!showDropboxComponent && !showGoogleDriveComponent && !showLogin" class="level">
             <div class="level-item has-text-centered">
                 <p class="select-service-text">Please select where you would like to save:</p>
             </div>
@@ -13,7 +13,7 @@
                    
                 </div> -->
                  <div class="column is-1">
-                    <button id="dropboxBtn" class="button is-info is-outlined iconBtn" @click="toggleDropboxComp">
+                    <button id="dropboxBtn" class="button is-info is-outlined iconBtn" @click="toggleLoginComp">
                         <i class="fab fa-dropbox"></i><span>Dropbox</span>
                     </button>
                 </div>
@@ -23,10 +23,13 @@
                     </button>
                 </div>
             </div>
-            <Dropbox
-              v-if="showDropboxComponent"
-            />
         </div>
+        <Dropbox
+              v-if="showDropboxComponent">
+        </Dropbox>
+        <Login
+            v-if = "showLogin" cloudService= "Dropbox">
+        </Login>
             
     </section>
 </section>
@@ -35,21 +38,27 @@
 </template>
 
 <script>
-import Dropbox from '../views/dropbox';
+import Dropbox from '@/views/dropbox.vue';
+import Login from '@/views/login.vue';
     export default {
         name:'NavBar',
         data() {
             return {
                 showDropboxComponent: false,
-                showGoogleDriveComponent: false
+                showGoogleDriveComponent: false,
+                showLogin:false
             }
         },
         components: {
             Dropbox,
+            Login,
         },
         methods: {
             toggleDropboxComp() {
-               this.showDropboxComponent != this.showDropboxComponent;
+               this.showDropboxComponent = !this.showDropboxComponent;
+            },
+            toggleLoginComp(){
+                this.showLogin = !this.showLogin;
             }
         },
     }

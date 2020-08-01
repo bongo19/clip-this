@@ -7,7 +7,8 @@
   "permissions": [
     "activeTab",
     "<all_urls>",
-    "*://*/*"
+    "*://*/*",
+    "identity"
   ],
   "icons": {
     "16": "icons/16.png",
@@ -27,5 +28,10 @@
       "19": "icons/19.png",
       "38": "icons/38.png"
     }
-  }
+  },
+  "oauth2": {
+    "client_id": "imf0pehsqjibmn2",
+    "scopes":["https://www.dropbox.com/oauth2/authorize?client_id=imf0pehsqjibmn2&response_type=token&redirect_uri=https://cbebjppepimnnpeelbdbnhddoneggjlb.chromiumapp.org/access_token';"]
+  },
+  "key": "cbebjppepimnnpeelbdbnhddoneggjlb"
 }

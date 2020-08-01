@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <header class="card-header flex-container">
-      <p class="card-header-title">Currently Connected to Dropbox</p>
+      <p class="card-header-title">Connect to Dropbox</p>
     </header>
     <!-- <div class="card-content">
       <div class="media">

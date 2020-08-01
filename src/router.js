@@ -31,7 +31,7 @@ export default new Router({
             name: 'home', 
             component: Home, 
         },
-        { path: '/dropbox/:token',
+        { path: '/dropbox/',
           name: 'dropbox', 
           component: Dropbox,
           props: true,
